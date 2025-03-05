@@ -11,5 +11,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
+// profile
 Route::get('/profile',[ProfileController::class,'index'])->name('profile.index');
+// username
+Route::post('/profile/username/update',[ProfileController::class,'name_update'])->name('profile.username');
+// email
+Route::post('/profile/email/update',[ProfileController::class,'email_update'])->name('profile.email');
