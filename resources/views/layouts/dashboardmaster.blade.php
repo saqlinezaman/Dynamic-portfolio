@@ -18,10 +18,12 @@
 
     <link href="assets/libs/morris.js/morris.css" rel="stylesheet" type="text/css" />
 
+    {{-- tostify --}}
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <!-- App css -->
     <link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
     {{-- font awsome cdn --}}
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
     {{-- font awsome  --}}
@@ -413,6 +415,11 @@
 
     <!-- Dashboard init-->
     <script src="assets/js/pages/dashboard.js"></script>
+
+    {{-- tostify --}}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    @yield('script')
 
 </body>
 
