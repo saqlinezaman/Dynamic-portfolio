@@ -292,7 +292,12 @@
 
                         <li class="dropdown">
                             <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+{{----default image-----------------------------------------------  --}}
+                                @if (auth()->user()->image == 'default.png')
+                                <img src="{{ asset('uploads/default') }}/{{ auth()->user()->image }}" alt="user-image" class="rounded-circle">
+                                @else
+                                <img src="{{ asset('uploads/profile') }}/{{ auth()->user()->image }}" alt="user-image" class="rounded-circle">
+                                @endif
                                 <span class="ms-1 d-none d-md-inline-block">
                                     {{Auth::user()->name}} <i class="mdi mdi-chevron-down"></i>
                                 </span>
@@ -376,11 +381,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
-                            <div><script>document.write(new Date().getFullYear())</script> © Drezoc</div>
+                            <div><script>document.write(new Date().getFullYear())</script> © Saqline</div>
                         </div>
                         <div class="col-md-6">
                             <div class="d-none d-md-flex gap-4 align-item-center justify-content-md-end">
-                                <p class="mb-0">Design & Develop by <a href="https://myrathemes.com/" target="_blank">MyraStudio</a> </p>
+                                <p class="mb-0">Saqline Zaman<a href="" target="_blank">MyraStudio</a> </p>
                             </div>
                         </div>
                     </div>
